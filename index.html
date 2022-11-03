@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App | The Guardian API</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="main-title">News App</h1>
+    </header>
+    <main>
+      <div class="container">
+        <form action="#" id="form-filters">
+          <div class="form-control">
+            <label class="form-filters__label" for="search-news"
+              >Search News</label
+            >
+            <input
+              class="form-filters__"
+              type="search"
+              name="search-news"
+              id="search-news"
+              placeholder="enter a topic"
+            />
+          </div>
+          <div class="form-control">
+            <label for="news-lang">News Language</label>
+            <select name="news-lang" id="news-lang">
+              <option value="all">All</option>
+              <option value="english">English</option>
+              <option value="spanish">Spanish</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="news-number">News Quantity</label>
+            <select name="news-number" id="news-number">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+        </form>
+        <section class="news-cards">
+          <article class="news-card">
+            <div class="news-card__img-container">
+              <img
+                class="news-card__img"
+                src="./images/thumbnail.jpg"
+                alt="A news thumbnail"
+              />
+              <span class="news-card__tag">POLITICS</span>
+            </div>
+            <h2 class="news-card__title">
+              An interesting news about some topic
+            </h2>
+            <p class="news-card__date">3 noviembre 2022</p>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
