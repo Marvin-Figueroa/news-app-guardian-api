@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #13293d;
+  --text-color-dark: #69306d;
+  --text-color-light: #70587c;
+  --card--bg-color: #f6efee;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Newsreader", serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  color: var(--primary-color);
+  background: url(./images/endless-constellation.svg);
+}
