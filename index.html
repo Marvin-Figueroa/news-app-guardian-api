@@ -19,13 +19,13 @@
     </header>
     <main>
       <div class="container">
-        <form action="#" id="form-filters">
+        <form action="#" class="form-filters" id="form-filters">
           <div class="form-control">
             <label class="form-filters__label" for="search-news"
               >Search News</label
             >
             <input
-              class="form-filters__"
+              class="form-filters__input"
               type="search"
               name="search-news"
               id="search-news"
@@ -33,16 +33,28 @@
             />
           </div>
           <div class="form-control">
-            <label for="news-lang">News Language</label>
-            <select name="news-lang" id="news-lang">
+            <label class="form-filters__label" for="news-lang"
+              >News Language</label
+            >
+            <select
+              class="form-filters__select"
+              name="news-lang"
+              id="news-lang"
+            >
               <option value="all">All</option>
               <option value="english">English</option>
               <option value="spanish">Spanish</option>
             </select>
           </div>
           <div class="form-control">
-            <label for="news-number">News Quantity</label>
-            <select name="news-number" id="news-number">
+            <label class="form-filters__label" for="news-number"
+              >News Quantity</label
+            >
+            <select
+              class="form-filters__select"
+              name="news-number"
+              id="news-number"
+            >
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="30">30</option>

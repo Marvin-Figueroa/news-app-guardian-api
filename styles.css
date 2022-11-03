@@ -1,3 +1,5 @@
+/* General Styles */
+
 :root {
   --primary-color: #fff;
   --secondary-color: #13293d;
@@ -24,4 +26,50 @@ body {
   box-sizing: border-box;
   color: var(--primary-color);
   background: url(./images/endless-constellation.svg);
+}
+
+/* Utilities */
+
+.container {
+  width: 90%;
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+/* Header  */
+
+.main-title {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 4.5rem;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+/* Form Filter Fields  */
+
+.form-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+.form-filters__label {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.form-filters__input,
+.form-filters__select {
+  padding: 1rem;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 1.6rem;
 }
