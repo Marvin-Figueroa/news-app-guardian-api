@@ -78,6 +78,11 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 0.6rem;
+  overflow: hidden;
+}
+
+.form-filters__input-container:focus-within {
+  box-shadow: orange 0px 0px 0px 3px;
 }
 
 .form-filters__input {
@@ -93,6 +98,12 @@ body {
   border-radius: 5px;
   font-size: 1.6rem;
   color: var(--text-color-dark);
+  outline: none;
+  border: none;
+}
+
+.form-filters__select:focus {
+  box-shadow: orange 0px 0px 0px 3px;
 }
 
 /* News Cards */
