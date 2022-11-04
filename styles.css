@@ -75,7 +75,6 @@ body {
   background-color: var(--primary-color);
   border-radius: 5px;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 0 0.6rem;
   overflow: hidden;
@@ -86,15 +85,19 @@ body {
 }
 
 .form-filters__input {
-  flex: 90;
   border: none;
   outline: none;
+  flex: 90;
+}
+
+.form-filters__select,
+.form-filters__input-container {
+  width: 80%;
 }
 
 .form-filters__input,
 .form-filters__select {
   padding: 1rem;
-  width: 80%;
   border-radius: 5px;
   font-size: 1.6rem;
   color: var(--text-color-dark);
@@ -183,4 +186,17 @@ body {
 .footer__copyright-author {
   font-weight: bold;
   color: var(--card--bg-color);
+}
+
+/* Media Queries - Mobile Devices */
+
+@media screen and (max-width: 550px) {
+  .form-filters {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form-filters__search-icon {
+    flex: 5;
+  }
 }
