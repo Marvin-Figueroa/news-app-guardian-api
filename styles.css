@@ -32,7 +32,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 114rem;
+  max-width: 130rem;
   margin: 0 auto;
 }
 
@@ -159,4 +159,16 @@ body {
 }
 
 .news-card__date {
+}
+
+/* Footer  */
+
+.footer {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.footer__copyright-author {
+  font-weight: bold;
+  color: var(--card--bg-color);
 }
