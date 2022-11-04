@@ -124,7 +124,8 @@ body {
   cursor: pointer;
 }
 
-.news-card:hover {
+.news-card:hover,
+.news-card:focus-within {
   box-shadow: var(--text-color-light) 0px 0px 0px 3px;
 }
 
@@ -139,6 +140,7 @@ body {
 
 .news-card__img-container {
   position: relative;
+  overflow: hidden;
 }
 
 .news-card__text-container {
@@ -151,6 +153,11 @@ body {
 .news-card__img {
   display: block;
   width: 100%;
+  transition: all 0.3s;
+}
+
+.news-card__img:hover {
+  transform: scale(1.1);
 }
 
 .news-card__tag {
@@ -164,12 +171,6 @@ body {
   letter-spacing: 1px;
   bottom: 2rem;
   left: 2rem;
-}
-
-.news-card__title {
-}
-
-.news-card__date {
 }
 
 /* Footer  */
