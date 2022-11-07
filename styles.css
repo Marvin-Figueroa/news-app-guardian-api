@@ -2,10 +2,10 @@
 
 :root {
   --primary-color: #fff;
-  --secondary-color: #13293d;
   --text-color-dark: #69306d;
   --text-color-light: #564592;
   --card--bg-color: #f6efee;
+  --accent-color: #9640e5;
 }
 
 *,
@@ -55,11 +55,9 @@ body {
 }
 
 .form-filters__search-btn {
-  /* width: 2rem; */
   flex: 10;
   cursor: pointer;
   display: block;
-  /* padding: 1rem; */
   height: 100%;
   border: none;
   outline: none;
@@ -91,7 +89,7 @@ body {
 }
 
 .form-filters__input-container:focus-within {
-  box-shadow: orange 0px 0px 0px 2px;
+  box-shadow: var(--accent-color) 0px 0px 0px 2px;
 }
 
 .form-filters__input {
@@ -116,7 +114,7 @@ body {
 }
 
 .form-filters__select:focus {
-  box-shadow: orange 0px 0px 0px 2px;
+  box-shadow: var(--accent-color) 0px 0px 0px 2px;
 }
 
 /* News Cards */
@@ -139,21 +137,24 @@ body {
 
 .news-card:hover,
 .news-card:focus-within {
-  box-shadow: var(--text-color-light) 0px 0px 0px 3px;
+  box-shadow: var(--accent-color) 0px 0px 0px 3px;
+  color: var(--accent-color);
 }
 
 .news-card__link-wrapper {
   text-decoration: none;
+  color: var(--text-color-dark);
 }
 
 .news-card__link-wrapper:hover,
 .news-card__link-wrapper:active {
-  color: var(--text-color-light);
+  color: var(--accent-color);
 }
 
 .news-card__img-container {
   position: relative;
   overflow: hidden;
+  height: 50%;
 }
 
 .news-card__text-container {
@@ -166,6 +167,8 @@ body {
 .news-card__img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: all 0.3s;
 }
 
@@ -175,8 +178,8 @@ body {
 
 .news-card__tag {
   position: absolute;
-  background-color: blueviolet;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
   font-weight: bold;
   padding: 0.5rem;
   font-size: 1.5rem;
