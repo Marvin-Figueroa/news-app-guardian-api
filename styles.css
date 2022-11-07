@@ -201,6 +201,11 @@ body {
   color: var(--card--bg-color);
 }
 
+/* Spinner */
+.spinner {
+  margin: 6rem auto;
+}
+
 /* Media Queries - Mobile Devices */
 
 @media screen and (max-width: 550px) {

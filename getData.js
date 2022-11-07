@@ -11,6 +11,10 @@ export async function getNewsData(query, lang, pageSize) {
 
   try {
     const res = await fetch(finalEndpoint);
+
+    if (!res.ok)
+      throw new Error('"The data could not be fetched from the server"');
+
     const data = await res.json();
 
     return data.response;

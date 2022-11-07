@@ -36,7 +36,7 @@ function generateNewsCardMarkup(dataObj) {
         src="${dataObj.thumbnail || "./images/thumbnail.jpg"}"
         alt="A news thumbnail"
       />
-      <span class="news-card__tag">${dataObj.pillar.toUpperCase()}</span>
+      <span class="news-card__tag">${dataObj.pillar?.toUpperCase()}</span>
     </div>
     <div class="news-card__text-container">
       <h2 class="news-card__title">
@@ -62,6 +62,7 @@ async function displayNews() {
     })
   );
 
+  renderSpinner(newsCardsContainer);
   const newsData = await getNewsData(searchVal, langVal, pageSizeVal);
   const news = formatNewsData(newsData.results);
   const newsCardsMarkup = news.map(generateNewsCardMarkup).join("");
@@ -80,4 +81,15 @@ function throttle(fn, interval) {
     fn(...args);
     setTimeout(() => (enableCall = true), interval);
   };
+}
+
+function renderSpinner(parentElement) {
+  const markup = `
+  <div class='spinner'>
+    <img src='./images/spinner.svg' alt='' />
+  </div>
+  `;
+
+  parentElement.innerHTML = "";
+  parentElement.insertAdjacentHTML("afterbegin", markup);
 }
