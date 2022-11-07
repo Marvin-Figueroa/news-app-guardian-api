@@ -6,10 +6,13 @@ const searchInput = document.querySelector("#search-news");
 const langSelect = document.querySelector("#news-lang");
 const pageSizeSelect = document.querySelector("#news-number");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  displayNews();
-});
+form.addEventListener(
+  "submit",
+  throttle((e) => {
+    e.preventDefault();
+    displayNews();
+  }, 2000)
+);
 
 document.addEventListener("DOMContentLoaded", (e) => {
   const newsFilters = JSON.parse(localStorage.getItem("newsFilters"));
@@ -65,4 +68,16 @@ async function displayNews() {
 
   newsCardsContainer.innerHTML = "";
   newsCardsContainer.insertAdjacentHTML("beforeend", newsCardsMarkup);
+}
+
+function throttle(fn, interval) {
+  let enableCall = true;
+
+  return (...args) => {
+    if (!enableCall) return;
+
+    enableCall = false;
+    fn(...args);
+    setTimeout(() => (enableCall = true), interval);
+  };
 }
