@@ -62,6 +62,7 @@ body {
   border: none;
   outline: none;
   background-color: var(--card--bg-color);
+  padding: 1rem;
 }
 
 .form-filters__search-icon {
