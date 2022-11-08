@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const newsFilters = JSON.parse(localStorage.getItem("newsFilters"));
   searchInput.value = newsFilters?.searchVal || "";
   langSelect.value = newsFilters?.langVal || "all";
-  pageSizeSelect.value = newsFilters?.amountVal || "10";
+  pageSizeSelect.value = newsFilters?.pageSizeVal || "10";
 
   displayNews();
 });
