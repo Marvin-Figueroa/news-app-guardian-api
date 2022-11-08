@@ -8,10 +8,30 @@ The homework consists of using The Guardian API to create a single page news app
 
 **Screenshot Mobile**
 
+![](./screenshots/screenshot-mobile.png)
+
 **Screenshot Tablet**
+
+![](./screenshots/screenshot-tablet.png)
 
 **Screenshot Desktop**
 
+![](./screenshots/screenshot-desktop.png)
+
 ## Live Site
 
+[Vercel Deployment](https://homework-week-2-mocha.vercel.app/)
+
 ## Built With
+
+- Semantic HTML5 markup
+- CSS Flexbox
+- CSS Grid
+- Media Queries
+- Desktop-First approach
+- CSS Custom Properties
+- JavaScript Basics
+- Fetch API
+- The Guardian API
+- Basic Event Handling
+- Basic DOM Manipulation
