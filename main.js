@@ -36,7 +36,9 @@ function generateNewsCardMarkup(dataObj) {
         src="${dataObj.thumbnail || "./images/thumbnail.jpg"}"
         alt="A news thumbnail"
       />
-      <span class="news-card__tag">${dataObj.pillar?.toUpperCase()}</span>
+      <span class=${dataObj.pillar ? "news-card__tag" : ""}>${
+    dataObj.pillar ? dataObj.pillar.toUpperCase() : ""
+  }</span>
     </div>
     <div class="news-card__text-container">
       <h2 class="news-card__title">
